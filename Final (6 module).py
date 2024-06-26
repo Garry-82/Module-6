@@ -7,9 +7,6 @@ class Figure:
     __color = [255, 255, 255]
     __sides = []
     filled = False
-#    def __init__(self):
-#        pass
-#        self.__color = [255, 255, 255]
     def get_sides (self):
         return self.__sides
     def get_color(self):
@@ -25,7 +22,6 @@ class Figure:
     def set_color(self, color):
         if self.__is_vailid_color(color) == True:
             self.__color = color
-#        return self.__color
     def set_sides(self, *side):
         _sides = []
         if Figure.__is_valid_sides(*side) == True:
@@ -60,7 +56,6 @@ class Figure:
         return sum(Figure.__sides)
 class Circle(Figure):
     def __init__(self, color, *side):
-#        self.color = color
         self.set_color(color)
         Figure.side_count = 1
         self.set_sides(*side)
